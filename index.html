@@ -4,34 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Decoficador-JS</title>
+    <title>Decodificador-JS</title>
   </head>
   <body>
     <header class="header">
       <section class="header__title">
         <img src="assets/logo.png" alt="logo" />
-        <h1>Decoficador de JavaScript</h1>
+        <h1>Decodificador de JavaScript</h1>
       </section>
     </header>
     <main class="container">
-      <section class="container__decoder">
-        <div class="container__decoder__pretext">
-        <div class="container__decoder__pretext__ajeitar">
-            <p>Digite seu texto</p>
-            <img src="assets/information.png" alt="info" />
-            <p>Apenas letras minúsculas e sem acento.</p>
+      <div class="input">
+        <input class="input__text" type="text" placeholder="Digite seu texto" />
+        <div class="input__info">
+          <img src="assets/information.png" alt="info" />
+          <p>Apenas letras minúsculas e sem acento.</p>
         </div>
-          <button>Criptografar</button>
-          <button>Descriptografar</button>
-        </div>
-        <div class="container__decoder__postext">
-          <img src="assets/haru-img.png" alt="sad-haru" />
-          <p>Nenhuma mensagem encontrada</p>
-          <p>
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </p>
-        </div>
-      </section>
+        <button class="input__button__criptografar">Criptografar</button>
+        <button class="input__button__descriptografar">Descriptografar</button>
+      </div>
+      <div class="output">
+        <img class="output__image" src="assets/haru-img.png" alt="sad-haru" />
+        <p class="output__title">Nenhuma mensagem encontrada</p>
+        <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
     </main>
   </body>
 </html>

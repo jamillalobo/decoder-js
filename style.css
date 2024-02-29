@@ -3,8 +3,10 @@
 
 :root {
     --dark-purple: #3B185F;
+    --dark-purple-hover:#3B185F95;
     --light-purple: #F8EBFF;
     --pink: #A12568;
+    --pink-hover: #FFF1F8;
     --white: #FFFFFF;
 
     --font: 'Raleway', sans-serif;
@@ -37,32 +39,102 @@ body {
 
 .container {
     padding: 5% 5%;
-}
-
-.container__decoder {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    gap: 5%;
 }
 
-.container__decoder__pretext {
+.input {
     width: 609px;
     height: 500px;
-    
+    /* background-color: var(--white); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%
 }
 
-.container__decoder__pretext__ajeitar {
+
+.input__text {
+    width: 609px;
+    height: 500px;
     border: 2px solid var(--pink);
     border-radius: 32px;
     width: 609px;
     height: 300px;
+
+    font-family: var(--font);
+    color: var(--dark-purple);
+    font-size: 2rem;
+    text-align: center;
 }
 
-.container__decoder__postext {
+.input__info {
+    display: flex;
+    gap: 5px;
+    color: var(--dark-purple);
+    font-family: var(--font);
+    font-size: 0.75rem;
+}
+
+.input__button__criptografar {
+    width: 60%;
+    height: 12%;
+    background-color: var(--dark-purple);
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 1rem;
+    border: 1px solid var(--dark-purple);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input__button__criptografar:hover {
+    background-color: var(--dark-purple-hover);
+}
+
+.input__button__descriptografar {
+    width: 60%;
+    height: 12%;
+    background-color: var(--white);
+    color: var(--pink);
+    font-family: var(--font);
+    font-size: 1rem;
+    border: 1px solid var(--pink);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.input__button__descriptografar:hover {
+    background-color: var(--pink-hover);
+}
+
+.output {
     width: 609px;
     height: 500px;
     background-color: var(--white);
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
     border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    font-family: var(--font);
+    color: var(--dark-purple);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.output__image {
+    width: 30%;
+    height: auto;
+}
+
+.output__title {
+    font-size: 1.5rem;
+    font-weight: 900;
 }
 
