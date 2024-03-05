@@ -42,33 +42,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 5%;
+    gap: 2%;
 }
 
 .input {
-    width: 609px;
-    height: 500px;
+    width: 80vh;
+    height: 70vh;
     /* background-color: var(--white); */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 5%
+    gap: 20px;
 }
 
-
 .input__text {
-    width: 609px;
-    height: 500px;
-    border: 2px solid var(--pink);
+    width: 100%;
+    height: 80%;
+    border: 2px solid var(--pink); 
+    background: none;
+    outline: none;
     border-radius: 32px;
-    width: 609px;
-    height: 300px;
-
     font-family: var(--font);
-    color: var(--dark-purple);
     font-size: 2rem;
     text-align: center;
+    padding: 5%;
+    box-sizing: border-box; 
+}
+
+.input__text:focus {
+    border: 2px solid var(--pink);
+}
+
+.input__text::placeholder {
+    color: var(--dark-purple);
+}
+
+.input__text:focus::placeholder {
+    color: var(--dark-purple-hover); 
 }
 
 .input__info {
@@ -112,8 +123,8 @@ body {
 }
 
 .output {
-    width: 609px;
-    height: 500px;
+    width: 80vh;
+    height: 70vh;
     background-color: var(--white);
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
     border-radius: 32px;
@@ -122,6 +133,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5%;
+
     font-family: var(--font);
     color: var(--dark-purple);
     font-size: 1rem;
@@ -137,4 +149,45 @@ body {
     font-size: 1.5rem;
     font-weight: 900;
 }
+
+.output__paragraph {
+    font-family: var(--font);
+    color: var(--dark-purple);
+    font-size: 1rem;
+    text-align: center;
+}
+
+.output__decoded {
+    width: 80vh;
+    height: 70vh;
+    background-color: var(--white);
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60%;
+    font-family: var(--font);
+    color: var(--dark-purple);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.output__button__descriptografar {
+    width: 60%;
+    height: 12%;
+    background-color: var(--white);
+    color: var(--pink);
+    font-family: var(--font);
+    font-size: 1rem;
+    border: 1px solid var(--pink);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.output__button__descriptografar:hover {
+    background-color: var(--pink-hover);
+}
+
 
