@@ -20,3 +20,5 @@ the logic behind the encript is to change the vogals (to decript is the opposite
 ## Test
 
 To test it, you need to copy this folder on your machine and test in any development local server (I used Live Server VS code extension). Hope you enjoy it :)
+
+Link to the Github Page of the project: https://jamillalobo.github.io/decoder-js/
