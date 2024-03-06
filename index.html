@@ -7,6 +7,8 @@
     <title>Decodificador-JS</title>
   </head>
   <body>
+    <div class="forehead">
+    </div>
     <header class="header">
       <section class="header__title">
         <img src="assets/logo.png" alt="logo" />
@@ -16,15 +18,12 @@
     <main class="container">
       <div class="input">
         <input class="input__text" placeholder="Digite seu texto"/>
-        <!-- <textarea class="input__text">
-          Digite seu texto
-        </textarea> -->
         <div class="input__info">
           <img src="assets/information.png" alt="info" />
-          <h3>Apenas letras minúsculas e sem acento.</h3>
+          <p>Apenas letras minúsculas e sem acento.</p>
         </div>
         <button onclick="criptografarTexto()" class="input__button__criptografar">Criptografar</button>
-        <button class="input__button__descriptografar">Descriptografar</button>
+        <button onclick="descriptografarTexto()" class="input__button__descriptografar">Descriptografar</button>
       </div>
       <div class="output">
         <img class="output__image" src="assets/haru-img.png" alt="sad-haru" />
@@ -32,8 +31,8 @@
         <p class="output__paragraph"></p>
       </div>
       <div class="output__decoded">
-        <p>Algum texto aparece aqui</p>
-        <button class="output__button__descriptografar">Copiar</button>
+        <p class="output__decoded__text">Algum texto aparece aqui</p>
+        <button onclick="copiarTexto()" class="output__button">Copiar</button>
       </div>
     </main>
     <script src="index.js"></script>
