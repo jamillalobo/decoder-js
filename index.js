@@ -1,72 +1,83 @@
 // function to hide output__decoded
-function esconderOutput__decoded() {
-  let elemento = document.getElementsByClassName("output__decoded")[0];
-  elemento.style.display = "none";
+function hideOutputDecoded() {
+  let element = document.getElementsByClassName("output__decoded")[0];
+  element.style.display = "none";
 }
 
-esconderOutput__decoded();
+hideOutputDecoded();
 
-function mostrarOutput__decoded() {
-    let elemento = document.getElementsByClassName("output__decoded")[0];
-    elemento.style.display = "flex";
+function showOutput__decoded() {
+  let element = document.getElementsByClassName("output__decoded")[0];
+  element.style.display = "flex";
+}
+
+function hideOutput() {
+  let element = document.getElementsByClassName("output")[0];
+  element.style.display = "none";
 }
 
 
-function esconderOutput() {
-  let elemento = document.getElementsByClassName("output")[0];
-  elemento.style.display = "none";
+function readText(ClassName, text) {
+  let element = document.getElementsByClassName(ClassName)[0];
+  element.innerHTML = text;
 }
 
-// funcao que le o texto do HTML e substitui pelo texto passado como parametro
-function lerTextoNaTela(ClassName, texto) {
-  let elemento = document.getElementsByClassName(ClassName)[0];
-  elemento.innerHTML = texto;
-}
-
-function exibirMensagemInicial() {
-  lerTextoNaTela("output__title", `Nenhuma mensagem encontrada`);
-  lerTextoNaTela(
+function showInitialMessage() {
+  readText("output__title", `Nenhuma mensagem encontrada`);
+  readText(
     "output__paragraph",
     `Digite um texto que você deseja criptografar ou descriptografar.`
   );
 }
 
-exibirMensagemInicial();
+showInitialMessage();
 
-function criptografarTexto() {
-  let texto = document.querySelector("input").value;
+function encriptText() {
+  let text = document.querySelector("input").value;
 
-  if (texto.includes("e", "i", "o", "u", "a")) {
-    let textoCriptografado = texto
+  if (/e|i|a|o|u/.test(text)) {
+    let encriptedText = text
       .replace(/e/g, "enter")
       .replace(/i/g, "imes")
+      .replace(/a/g, "ai")
       .replace(/o/g, "ober")
-      .replace(/u/g, "ufat")
-      .replace(/a/g, "ai");
+      .replace(/u/g, "ufat");
 
-    esconderOutput();
-    mostrarOutput__decoded();
-    lerTextoNaTela(
-      "output__decoded",
-      textoCriptografado
+    hideOutput();
+    showOutput__decoded();
+    readText(
+      "output__decoded__text",
+      encriptedText
     );
   } else {
-    lerTextoNaTela("output__decoded", texto);
+    readText("output__decoded__text", text);
   }
 }
 
-// escrever texto no input
+function decriptText() {
+  let text = document.querySelector("input").value;
 
-// ler texto no input
+  if (/enter|imes|ai|ober|ufat/.test(text)) {
+    let decriptedText = text
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
 
-// criptografar texto
+    hideOutput();
+    showOutput__decoded();
+    readText(
+      "output__decoded__text",
+      decriptedText
+    );
+  } else {
+    readText("output__decoded__text", text);
+  }
+}
 
-// exibir texto criptografado no output
+function copyText() {
+  let outputText = document.getElementsByClassName("output__decoded__text")[0].innerHTML;
+  navigator.clipboard.writeText(outputText);
+}
 
-// copiar texto criptografado
-
-// escrever texto criptgrafado no input
-
-// ler texto criptografado no input
-
-// descriptografar texto

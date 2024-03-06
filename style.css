@@ -7,6 +7,7 @@
     --light-purple: #F8EBFF;
     --pink: #A12568;
     --pink-hover: #FFF1F8;
+    --white-hover: #FFFFFF95;
     --white: #FFFFFF;
 
     --font: 'Raleway', sans-serif;
@@ -134,7 +135,7 @@ body {
 }
 
 .input__button__descriptografar:hover {
-    background-color: var(--pink-hover);
+    background-color: var(--white-hover);
 }
 
 .output {
